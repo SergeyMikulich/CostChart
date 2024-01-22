@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CostChart/static/css/main.fc90aca4.css",
+    "main.js": "/CostChart/static/js/main.aa4bc226.js",
+    "index.html": "/CostChart/index.html",
+    "main.fc90aca4.css.map": "/CostChart/static/css/main.fc90aca4.css.map",
+    "main.aa4bc226.js.map": "/CostChart/static/js/main.aa4bc226.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc90aca4.css",
+    "static/js/main.aa4bc226.js"
+  ]
+}
