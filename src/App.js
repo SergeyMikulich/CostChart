@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Chart from './components/Chart/Chart';
+import Input from './components/Input/Input';
+import List from './components/List/List';
+import React, { useState } from 'react';
+import './assets/styles/main.scss';
 
 function App() {
+  const [costs, setCosts] = useState([]);
+  const [recordsUpdated, setRecordsUpdated] = useState(0);
+
+  const updateList = () => {
+    setRecordsUpdated(recordsUpdated + 1);
+  };
+  const onAddHandler = async (inputValue) => {
+    updateList();
+    console.log("onAddHandler", inputValue);
+  };
+
+  const onCostChangeHandler = () => {
+    updateList();
+  };
+  const onCostDeleteHandler = () => {
+    updateList();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="chart-app">
+      <div className="container">
+        <div className="cost-info">
+          <Input onAdd={onAddHandler} />
+          <List recordsUpdated={recordsUpdated} setCosts={setCosts} onCostChange={onCostChangeHandler} onCostDelete={onCostDeleteHandler} />
+        </div>
+        <Chart costs={costs} recordsUpdated={recordsUpdated} />
+      </div>
     </div>
   );
 }

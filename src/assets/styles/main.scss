@@ -1,0 +1,14 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.chart-app {
+    .container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        align-items: center;
+        .cost-info {}
+    }
+}
